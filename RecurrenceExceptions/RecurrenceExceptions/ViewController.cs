@@ -61,6 +61,7 @@ namespace RecurrenceExceptions
 
             // Add Schedule appointment
             ScheduleAppointment recurrenceAppointment = new ScheduleAppointment();
+            recurrenceAppointment.Id = 1;
             recurrenceAppointment.StartTime = startDate;
             recurrenceAppointment.EndTime = endDate;
             recurrenceAppointment.Subject = (NSString)"Occurs Daily";
@@ -128,7 +129,7 @@ namespace RecurrenceExceptions
             exceptionAppointment.EndTime = exceptionAppointment.StartTime.AddSeconds(2 * 60 * 60);
             exceptionAppointment.Subject = (NSString)"Occurs Daily";
             exceptionAppointment.AppointmentBackground = UIColor.Red;
-            exceptionAppointment.RecurrenceId = recurrenceAppointment;
+            exceptionAppointment.RecurrenceId = recurrenceAppointment.Id;
             exceptionAppointment.ExceptionOccurrenceActualDate = exceptionDate3;
             scheduleAppointmentCollection.Add(exceptionAppointment);
         }
